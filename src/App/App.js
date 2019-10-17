@@ -32,6 +32,7 @@ class App extends Component {
     }
 
     fetch('http://localhost:3001/api/v1/reservations',options)
+    .then(()=>this.setState({reservations:[ ...this.state.reservations, newRes]}))
 
 
   }
@@ -54,7 +55,7 @@ class App extends Component {
         <Form 
           addReservation={this.addReservation}
         />
-        
+
         <ReservationContainer 
           reservations ={this.state.reservations}
           cancelReservation= {this.cancelReservation}
