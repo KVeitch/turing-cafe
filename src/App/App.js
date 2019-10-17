@@ -22,7 +22,7 @@ class App extends Component {
     .then(data => this.setState({reservations:data}))
   }
 
-  addReservation(newRes) {
+  addReservation = (newRes) => {
     const options = {
       method: 'POST',
       body: JSON.stringify(newRes),

@@ -2,7 +2,7 @@ import React from 'react';
 import './Reservation.css';
 
 const Reservation = (props) => {
-  console.log(props)
+
  const { name, id, date, time, number, cancelReservation} = props
   return(
     <section className='reservation'>

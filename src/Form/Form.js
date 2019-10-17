@@ -18,11 +18,13 @@ class Form extends Component {
     this.setState({ [event.target.name]:event.target.value })
   }
 
-  handleClick(){
+  handleClick = () => {
     this.props.addReservation({ ...this.state })
+    this.setState({ name:'', date:'', time:'', number:''})
   }
 
   render() {
+    console.log(this.props)
     return (
       <form>
         <input 
@@ -49,7 +51,7 @@ class Form extends Component {
           value={this.state.numGuest} 
           onChange={(event)=>this.handleChange(event)}
         />
-        <div type="button" className='btn__reservation'> Set Reservation</div>
+        <div type="button" className='btn__reservation' onClick={this.handleClick}> Set Reservation</div>
       </form>
     )
   }
