@@ -1,13 +1,17 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { shallow } from 'enzyme'
+
+import { shallow, mount } from 'enzyme'
 import Form from './Form';
+
 
 describe('Form',()=>{
   let wrapper;
+  const mockAddReservation = jest.fn()
   
   beforeEach(()=> {
-    wrapper = shallow(<Form />)
+    wrapper = shallow(<Form 
+      addReservation={mockAddReservation}
+                        />)
   })
 
   it('should match the snapshot with all the data passed in correctly', () => {
@@ -57,18 +61,22 @@ describe('Form',()=>{
         } 
        }
        wrapper.instance().handleChange(event)
+
        expect(wrapper.state().number).toEqual(36)
     })
   })
 
   describe('handleClick', () => {
-    it('should call handleClick when the button is clicked',()=>{
-      wrapper.instance().handleClick= jest.fn();
-      wrapper.instance().props.addReservation = jest.fn();
-      wrapper.update()
+    it('should call addReservation when the button is clicked',()=>{
+      wrapper =mount(<Form 
+                        addReservation={mockAddReservation}
+                      />)
       wrapper.find('.btn__reservation').simulate('click');
 
-      expect(wrapper.instance().handleClick).toHaveBeenCalled()
+      expect(wrapper.props().addReservation).toHaveBeenCalled()
+
+
+
     })
 
   })
