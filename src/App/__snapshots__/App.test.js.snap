@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should match the snapshot with all the data passed in correctly 1`] = `
+<main
+  className="App"
+>
+  <Form
+    addReservation={[Function]}
+  />
+  <ReservationContainer
+    cancelReservation={[Function]}
+    reservations={Array []}
+  />
+</main>
+`;

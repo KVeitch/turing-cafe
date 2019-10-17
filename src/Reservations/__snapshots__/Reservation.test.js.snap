@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Empty Reservation should match the snapshot with all the data passed in correctly 1`] = `
+<section
+  className="reservation"
+>
+  <h2 />
+  <p />
+  <p />
+  <p>
+    Number of guest 
+  </p>
+  <div
+    className="cancel__btn"
+    onClick={[Function]}
+    type="button"
+  >
+    Cancel
+  </div>
+</section>
+`;
+
+exports[`Filled Reservation should match the snapshot with all the data passed in correctly 1`] = `
+<section
+  className="reservation"
+>
+  <h2>
+    Susan Boyle
+  </h2>
+  <p>
+    12/12
+  </p>
+  <p>
+    7:20
+  </p>
+  <p>
+    Number of guest 
+    36
+  </p>
+  <div
+    className="cancel__btn"
+    onClick={[Function]}
+    type="button"
+  >
+    Cancel
+  </div>
+</section>
+`;
