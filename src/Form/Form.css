@@ -1,0 +1,19 @@
+form {
+  display:flex;
+  flex-direction: row;
+  /* justify-content: space-around; */
+  align-items: center;
+}
+
+input {
+  margin: 5px 10px 5px 5px;
+  height:50px;
+  width: 150px;
+}
+
+.btn__reservation {
+  background: #008080;
+  width:150px;
+  height:50px;
+  line-height: 50px;
+}

@@ -3,7 +3,6 @@ import './ReservationContainer.css';
 import Reservation from '../Reservations/Reservation'
 
 const ReservationContainer = (props)=>{
-  console.log(props)
   const cardList = props.reservations.map(res => 
     <Reservation
       key= {res.id} 
@@ -12,6 +11,7 @@ const ReservationContainer = (props)=>{
       name = {res.name}
       number = {res.number}
       time = {res.time}
+      cancelReservation = {props.cancelReservation}
     />
   )
 
