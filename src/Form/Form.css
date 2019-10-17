@@ -1,7 +1,6 @@
 form {
   display:flex;
   flex-direction: row;
-  /* justify-content: space-around; */
   align-items: center;
 }
 
@@ -9,6 +8,11 @@ input {
   margin: 5px 10px 5px 5px;
   height:50px;
   width: 150px;
+  padding: 0 10px;
+}
+
+input::placeholder {
+  font-size: 14px;
 }
 
 .btn__reservation {
