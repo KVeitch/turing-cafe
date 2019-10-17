@@ -49,7 +49,7 @@ describe('Form',()=>{
        expect(wrapper.state().time).toEqual('7:00')
     })
 
-    it('should change state.number when handleChange is called from number',()=>{
+    it('should change state.number when handleChange is called from number',() => {
       const event = {
         target:{
           name:'number',
@@ -61,13 +61,17 @@ describe('Form',()=>{
     })
   })
 
+  describe('handleClick', () => {
+    it('should call handleClick when the button is clicked',()=>{
+      wrapper.instance().handleClick= jest.fn();
+      wrapper.instance().props.addReservation = jest.fn();
+      wrapper.update()
+      wrapper.find('.btn__reservation').simulate('click');
+
+      expect(wrapper.instance().handleClick).toHaveBeenCalled()
+    })
+
+  })
 
 
-  // it('',()=>{
-    
-  // })
-
-  // it('',()=>{
-    
-  // })
 })

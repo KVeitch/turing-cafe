@@ -37,7 +37,7 @@ class App extends Component {
 
   }
 
-  cancelReservation(id) {
+  cancelReservation = (id) => {
     const options = {
         method: 'DELETE',
         headers : {
@@ -46,6 +46,13 @@ class App extends Component {
     }
     fetch(`http://localhost:3001/api/v1/reservations/${id}`,options)
     .then(data=> {console.log('del: ',data );return data})
+    .then(()=>{
+      const resList = this.state.reservations.filter(res=> res.id !== id);
+      this.setState({ reservations:resList })
+
+    })
+
+
   }
 
 
