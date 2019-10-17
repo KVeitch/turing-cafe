@@ -1,10 +1,16 @@
 import React from 'react';
 import './Reservation.css';
 
-const Reservation = () => {
-
+const Reservation = (props) => {
+ const { name, id, date, time, number} = props
   return(
-    <h1>Res</h1>
+    <section className='reservation'>
+    <h2>{name}</h2>
+    <p>{date}</p>
+    <p>{time}</p>
+    <p>Number of guest {number}</p>
+    <div value={id} type='button' className='cancel__btn'>Cancel</div>
+    </section>
   )
 
 }

@@ -7,6 +7,16 @@ class Form extends Component {
 
   }
 
+  render() {
+    return (
+      <>
+        <input />
+        <input />
+        <input />
+        <div type="button"> Set Reservation</div>
+      </>
+    )
+  }
 
 
 }
